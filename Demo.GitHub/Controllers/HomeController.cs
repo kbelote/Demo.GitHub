@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace Demo.GitHub.Controllers
 {
@@ -11,6 +7,23 @@ namespace Demo.GitHub.Controllers
         public ActionResult Index()
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
+
+             int i = 10;
+            var newFile = string.Empty;
+            for (int j = 0; j < i; j++)
+            {
+                newFile += " " + j;
+            }
+
+            while(i > 0 )            {
+                newFile += " " + i;
+                i--;
+            }
+
+            for (int j = 0; j < i; j++)
+            {
+                newFile += " " + j;
+            }
 
             return View();
         }
